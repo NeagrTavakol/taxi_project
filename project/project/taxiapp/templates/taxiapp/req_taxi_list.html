@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list_of_requests</title>
+</head>
+<body>
+    {% for req in object_list %}
+    
+        <h2>{{ req.user }}</h2>
+        <h2>{{ req.orig_addr }}</h2>
+        <h2>{{ req.dest_addr }}</h2>
+        <h2>{{ req.search_for_taxi }}</h2>
+        <h2>{{ req.achieve_dest }}</h2>
+        <h2>{{ req.travel_costs }}</h2>
+        <hr>
+    {% empty %}
+
+    {% endfor %}
+</body>
+</html>
